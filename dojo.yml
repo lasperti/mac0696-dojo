@@ -1,6 +1,6 @@
-id: mac0696
+id: mac0696~6acdae46
 name: MAC0696
-type: course       
+type: topic       
 modules:
   - id: web-security
     name: Web Security
