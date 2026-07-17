@@ -6,12 +6,12 @@ modules:
     name: Aula 01
     challenges:
       - import:
-	  dojo: linux-luminarium
-	  module: hello-hackers
-	  challenge: hello
-	name: "Primeiro Desafio"
-	description: "Use o comando hello no terminal e pegue a flag!"
-	
+          dojo: linux-luminarium
+          module: hello-hackers
+          challenge: hello
+        name: "Primeiro Desafio"
+        description: "Use o comando hello no terminal e pegue a flag!"
+        
       - import:
           dojo: intro-to-cybersecurity
           module: web-security
@@ -26,9 +26,9 @@ modules:
         name: "SQL Injection 02"
         description: "E esse será feito pelos alunos, com auxílio da gente."
 
-	- import:
-	  dojo: intro-to-cybersecurity
+      - import:
+          dojo: intro-to-cybersecurity
           module: web-security
-	  challenge: sqli-union
-	name: "SQL Injection 03 (Desafio)"
-	description: "E esse último challenge pode ser feito como desafio (em casa ou na aula) para quem conseguiu fazer os outros com facilidade."
+          challenge: sqli-union
+        name: "SQL Injection 03 (Desafio)"
+        description: "E esse último challenge pode ser feito como desafio (em casa ou na aula) para quem conseguiu fazer os outros com facilidade."
