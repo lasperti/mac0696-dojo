@@ -2,14 +2,33 @@ id: mac0696
 name: MAC0696
 type: topic
 modules:
-  - id: web-security
-    name: Web Security
+  - id: aula-01
+    name: Aula 01
     challenges:
+      - import:
+	  dojo: linux-luminarium
+	  module: hello-hackers
+	  challenge: hello
+	name: "Primeiro Desafio"
+	description: "Use o comando hello no terminal e pegue a flag!"
+	
       - import:
           dojo: intro-to-cybersecurity
           module: web-security
           challenge: sqli-pin
+        name: "SQL Injection 01"
+        description: "À princípio, iremos resolver esse desafio para instruir o básico de SQLi."
+        
       - import:
           dojo: intro-to-cybersecurity
           module: web-security
           challenge: sqli-password
+        name: "SQL Injection 02"
+        description: "E esse será feito pelos alunos, com auxílio da gente."
+
+	- import:
+	  dojo: intro-to-cybersecurity
+          module: web-security
+	  challenge: sqli-union
+	name: "SQL Injection 03 (Desafio)"
+	description: "E esse último challenge pode ser feito como desafio (em casa ou na aula) para quem conseguiu fazer os outros com facilidade."
