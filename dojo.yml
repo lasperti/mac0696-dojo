@@ -7,7 +7,7 @@ modules:
     challenges:
       - import:
           dojo: linux-luminarium
-          module: hello-hackers
+          module: hello
           challenge: hello
         name: "Primeiro Desafio"
         description: "Use o comando hello no terminal e pegue a flag!"
