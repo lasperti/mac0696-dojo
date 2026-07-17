@@ -1,0 +1,15 @@
+id: mac0696
+name: MAC0696
+type: hidden        # unlisted until you're ready; change to "course" or "topic" to show it
+modules:
+  - id: web-security
+    name: Web Security
+    challenges:
+      - import:
+          dojo: intro-to-cybersecurity
+          module: web-security
+          challenge: sqli-pin
+      - import:
+          dojo: intro-to-cybersecurity
+          module: web-security
+          challenge: sqli-password
