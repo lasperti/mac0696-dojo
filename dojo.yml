@@ -1,6 +1,6 @@
 id: mac0696
 name: MAC0696
-type: hidden        # unlisted until you're ready; change to "course" or "topic" to show it
+type: course       
 modules:
   - id: web-security
     name: Web Security
