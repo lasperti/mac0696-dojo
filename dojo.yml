@@ -2,33 +2,300 @@ id: mac0696
 name: MAC0696
 type: topic
 modules:
+  - id: welcome
+    name: Welcome
+    challenges:
+      - import:
+          dojo: welcome
+          module: welcome
+          challenge: terminal
+        name: "Using the Terminal"
+        description: >
+          Throughout your pwn.college journey, you will have countless interactions
+          with the Linux terminal, colloquially termed the "shell". If you don't yet
+          know the Art of the Shell, fear not, you will! For now, we'll just focus on
+          launching it. We make launching the terminal easy: when you start a challenge,
+          we do it for you! Just click ▶ Start below, and this challenge will start. Once
+          it's loaded, the terminal will appear automatically right under this text, and
+          you will be granted your first flag! Flag? As a reminder, this platform uses
+          flags to track your progress. Flags are cryptographic tokens that are given to
+          you when you solve challenges. Once you see it, copy-paste it into the submission
+          box below and submit! Then, once you get the confirmation that the flag was
+          correct, move on to the next challenge! Try it now: launch the terminal, copy
+          the flag (drag-selecting it with your mouse will automatically copy it to your
+          clipboard), and paste it into the Flag textbox below! NOTE: Want more screen
+          space? You can click the "fullscreen" button (⛶) to full-screen the interface
+          for more room.
+
+      - import:
+          dojo: welcome
+          module: welcome
+          challenge: vscode
+        name: "Using the VSCode Workspace"
+        description: >
+          This challenge will teach you to use the Visual Studio Code workspace. You can
+          start this challenge using the Start button below. When it starts, you'll
+          probably see the Terminal, like the previous level. This time, though, the
+          challenge will refuse to give you the flag until you switch to vscode! You can
+          use the workspace selector on the bar below the Terminal (e.g., the button that
+          says "Terminal") to select "Code" and bring up the Visual Studio Code interface
+          in place of the terminal. Again, you can use it as-is, or you can click the
+          "fullscreen" button (⛶) to full-screen the interface for more room. Once VSCode
+          loads, launch a terminal (press Control-Shift-Backtick or click the ☰ button in
+          VSCode's left panel, and select the Terminal menu, and click New Terminal). When
+          we detect that you have launched the terminal in VSCode, we will give you the
+          flag! NOTE: The pwn.college dojo will remember what the last workspace interface
+          (Terminal, VSCode, etc.) you used, and will default to that, so the next challenge
+          you run will now launch VSCode by default until you switch.
+
+      - import:
+          dojo: welcome
+          module: welcome
+          challenge: desktop
+        name: "Using the GUI Desktop"
+        description: >
+          Next, we will explore the Desktop! Start the challenge and use the workspace
+          selector on the bar below Visual Studio Code (e.g., the button that says "Code")
+          to select "Desktop". This will launch up a Linux desktop for you to use! This
+          challenge requires you to open the terminal inside the Desktop, and we will give
+          you the flag.
+
+      - import:
+          dojo: welcome
+          module: welcome
+          challenge: desktop-paste
+        name: "Pasting into the Desktop"
+        description: >
+          Next, we will learn to paste into the Desktop! You will need this secret token:
+          f8e5eb3178faf47ce5692f7f618e8f6f0e8769de7dd67ffe62b4375430a31e1b9d18a9574e8231e98572.
+          Launch a terminal in the desktop for further directions!
+
+      - import:
+          dojo: welcome
+          module: welcome
+          challenge: restart
+        name: "Restarting Challenges"
+        description: >
+          Hacking is a contact sport. There will be times when your attempts to hack
+          through a level will result in irreparable damage to the workspace environment.
+          When this happens, don't panic, you can just restart the challenge! This level
+          will guide you through this concept. On your first attempt, it will ask you for a
+          password that you don't yet know. When you get this password wrong, it will tell
+          you what the right one is, but will then destroy the challenge and the flag file.
+          You'll need to restart the challenge (go back to this page and click the Start
+          button below!) to try again. Just start the terminal to give it a go. Good luck!
+
+      - import:
+          dojo: welcome
+          module: welcome
+          challenge: challenge
+        name: "Challenge Programs"
+        description: >
+          The actual files comprising the challenge live in the /challenge directory.
+          Unlike previous challenges, which automatically ran when the terminal was opened,
+          this challenge requires you to invoke the /challenge/solve program directly! Just
+          by running it in a terminal, you will get the flag! NOTE: This challenge, and the
+          challenges below, begin to assume that you possess knowledge of the Linux
+          commandline. If you happen to lack this knowledge, we recommend you to first
+          complete the Linux Luminarium dojo, then resume this module!
+
+      - import:
+          dojo: welcome
+          module: welcome
+          challenge: flag
+        name: "The Flag File"
+        description: >
+          So far, the challenges have been giving you flags directly. In this challenge, you
+          will learn that the flag actually lives in the /flag file. Your real goal, in any
+          challenge, is to get the contents of this file through any means necessary, even
+          if the challenge program does not do it on purpose. You might try to just read the
+          /flag file on your own. Unfortunately for you, you are executing as the hacker
+          user and /flag is only readable by the root user, so you cannot access it. In the
+          previous challenges, the challenge program itself (e.g., /challenge/solve), which
+          runs as the root user (and, thus, can read the flag), read this file and printed
+          its contents, but this level is harder. Like many of the other challenges on the
+          platform, this challenge's /challenge/solve program will not read the flag file
+          directly. However, it will make the flag world-readable when you run it! After
+          that, you will need to read /flag yourself (e.g., using cat /flag or a text
+          editor), and submit its contents as the solution.
+
+      - import:
+          dojo: welcome
+          module: welcome
+          challenge: persist-1
+        name: "Persistent Home Directories - One"
+        description: >
+          Your home directory in the dojo is persistent between challenges. This means that
+          when you start a new challenge, all of the files you have saved in there will
+          still be there. You can use it to build up notes across multiple challenges in a
+          module, reference old solutions, or rerun solutions perfected in Practice mode
+          against challenges in non-Practice mode. This challenge, and the next, will drive
+          home the point by having you write a file in your home directory. Launch this
+          challenge (/challenge/solve) and follow its instructions!
+
+      - import:
+          dojo: welcome
+          module: welcome
+          challenge: persist-2
+        name: "Persistent Home Directories - Two"
+        description: >
+          Now that you have created a file in your home directory, this challenge will use
+          it! Launch this challenge (/challenge/solve) and follow its instructions!
+
   - id: aula-01
     name: Aula 01
     challenges:
       - import:
           dojo: linux-luminarium
-          module: hello
-          challenge: hello
-        name: "Primeiro Desafio"
-        description: "Use o comando hello no terminal e pegue a flag!"
-        
+          module: shenanigans
+          challenge: bashrc-trojan
+        name: "Bashrc Backdoor"
+        description: |
+          When your shell starts up, it looks for `.bashrc` file in your home directory and executes it as a *startup script*. You can customize your `/home/hacker/.bashrc` with useful things, such as setting environment variables, tweaking your shell configuration, and so on.
+
+          You can *also* use it for *evil*! An unwitting victim's `.bashrc` is a common target for shenanigans. Imagine sneaking onto your friend's computer and adding a `echo "Hackers were here!"` at the end of their `.bashrc`. That's funny, but the same capability can be used for much more nefarious purposes. Malicious software, for example, often targets startup scripts such as `.bashrc` to maintain persistence into the future!
+
+          In this challenge, we'll pretend that you've broken into a victim user's machine! That user is named `zardus`, with a home directory of `/home/zardus`. You, as the `hacker` user, have write access to his `.bashrc`, and `zardus` has read-access to `/flag`. The victim is simulated by the script `/challenge/victim`, and you can launch this script at any time to observe the victim logging into the computer. Can you get the flag?
+
+          ---
+
+          **HINT:** Like the scripts you explored in [Chaining Commands](/linux-luminarium/chaining), the `.bashrc` script is just a shell script. Adding a new line with a command on it (e.g., `echo Hello Hackers`) will get that command executed, so all you really need to think about is what command will get you the flag!
+
+          **NOTE:** The victim's `/home/zardus/.bashrc` will have a lot of stuff already in it: the shell's startup is a complex affair. Don't panic --- just add your payload to the end and hope for the best!
+
+          Dica: Relembre os comandos básicos do terminal (cd, ls, mv, cat, echo...) e onde está localizada a flag!
+            
       - import:
           dojo: intro-to-cybersecurity
           module: web-security
-          challenge: sqli-pin
-        name: "SQL Injection 01"
-        description: "À princípio, iremos resolver esse desafio para instruir o básico de SQLi."
-        
+          challenge: cmdi-ls-semicolon
+        name: "CMDi 1"
+        description: |
+          Now, imagine getting more crazy than these security issues between the web server and the file system. What about interactions between the web server and the whole Linux shell?
+
+          Depressingly often, developers rely on the command line shell to help with complex operations. In these cases, a web server will execute a Linux command and use the command's results in its operation (a frequent usecase of this, for example, is the `Imagemagick` suite of commands that facilitate image processing). Different languages have different ways to do this (the simplest way in Python is `os.system`, but we will mostly be interacting with the more advanced `subprocess.check_output`), but almost all suffer from the risk of *command injection*.
+
+          In path traversal, the attacker sent an unexpected character (`.`) that caused the filesystem to do something unexpected to the developer (look in the parent directory). The shell, similarly, is chock full of special characters that cause effects unintended by the developer, and the gap between what the developer intended and the reality of what the shell (or, in previous challenges, the file system) does holds all sorts of security issues.
+
+          For example, consider the following Python snippet that runs a shell command:
+
+          ```console
+          os.system(f"echo Hello {word}")
+          ```
+
+          The developer clearly intends the user to send something like `Hackers`, and the result to be something like the command `echo Hello Hackers`. But the hacker might send *anything* the code doesn't explicitly block. Recall what you learned in the [Chaining](/linux-luminarium/chaining) module of the [Linux Luminarium](/linux-luminarium): what if the hacker sends something containing a `;`?
+
+          In this level, we will explore this exact concept. See if you can trick the level and leak the flag!
+
+          Dica: Use o navegador (dentro do Desktop Mode) para acessar o servidor web, cujo endereço e caminho (/algumacoisa) estão em /challenge/server, que você tem que rodar. Pode usar & para deixar o terminal funcionando se precisar. 
+
       - import:
           dojo: intro-to-cybersecurity
-          module: web-security
-          challenge: sqli-password
-        name: "SQL Injection 02"
-        description: "E esse será feito pelos alunos, com auxílio da gente."
+          module: cryptography
+          challenge: xor
+        name: "XOR"
+        description: |
+          Strangely enough, we'll start our crypto journey with the humble [Exclusive Or](https://en.wikipedia.org/wiki/Exclusive_or) (XOR) operator. An XOR is one of the most common [bitwise operators](https://en.wikipedia.org/wiki/Bitwise_operation) that you will encounter in your security journey, *especially* in cryptography. A couple of terms to unpack here...
+
+          ---
+
+          **Bitwise:** Remember from [Dealing with Data](/fundamentals/data-dealings) that computers think in binary! That is, they conceptualize numbers in [base 2](https://www.google.com/search?q=learn+number+bases), so something like `9` is expressed as `1001`. An XOR operates on one pair of bits at a time, producing `1` when an odd number of inputs are `1`, and `0` otherwise.
+
+          For example:
+
+          ```
+              1 0 0 1 (decimal 9)
+          XOR
+              0 1 0 1 (decimal 5)
+              ---------
+              1 1 0 0 (decimal 12)
+          ```
+
+          ---
+
+          **Cryptography:** Why is XOR so common in crypto? In cryptography, it is common because it is [*self-inverse*](https://en.wikipedia.org/wiki/Exclusive_or#Properties)! That is (using `^` for XOR here, which is consistent with many programming languages), `5 ^ 9 == 12`, and `12 ^ 9 == 5`. If the number `9` is a key only known to you and me, I can send you messages by XORing them with `9`, and you can recover the message with XORing them with `9` as well! Obviously, we can achieve this property with me adding 9 and you subtracting 9, without using XOR, but this requires more complex circuitry and extra bits (e.g., to handle "carrying the 1" in `1111 + 0001 == 10000`), whereas XOR does not have this problem (`1111 ^ 0001 == 1110`).
+
+          In this level, you will learn to XOR! We'll give you a shared *key*, `XOR` a secret number with it, and expect you to recover the number.
+
+          ---
+
+          **HINT:** Use Python's `^` operator to XOR integers (including hexadecimal values)!
+
+            
+            
+      - import:
+          dojo: intro-to-cybersecurity
+          module: reverse-engineering
+          challenge: cimg-magic-number-python
+        name: "File Formats: Magic Numbers (Python)"
+        description: |
+          The first few challenges in this dojo will walk you through the creation of your first basic cIMG image. Of course, the point of this is not to create images, but rather to experience the process of understanding a program, and by extension understanding logic and data formats used by the program, just from reversing its binary.
+
+          The `/challenge/cimg` binary in this level is (the start of) an image rendering program, specifically focusing on the cIMG format. Software identifies the formats of files (e.g., whether the file is a GIF, a JPEG, an MP3, or so on) in a few ways:
+
+          1.  The file extension. This is the part of the file after the `.`: a `ZardusSmiling.jpg` is probably a JPEG (image) of Zardus smiling, whereas `KanakLaughing.mp3` is probably an MP3 (audio) of Kanak laughing.
+          2.  The *magic number*. Files can get renamed, or the filenames associated with files can be lost (e.g., in a partial filesystem failure) or simply missing (e.g., in a data stream). Thus, most file formats include a *magic number* in the format that a parser can check to identify it.
+
+          You've already interacted with plenty of files containing magic numbers. For example, the ELF binary files you've worked with all start with the bytes `\x7fELF`. Of course, to you, this looks like a semantic-bearing string of characters, but a computer reads it as a number, hence the term.
+
+          In this challenge, you must craft a file with a `cimg` extension that contains the correct magic number. You can learn this magic number by reversing the `/challenge/cimg` binary. If you properly get past the magic number check, the challenge will give you the flag!
+
+          ---
+
+          **Approach Suggestions:** Some hopefully-useful suggestions to get you started:
+
+          -   Reverse engineering can be done "statically" (e.g., in a graphical reversing tool such as IDA and the like, with the program you are trying to understand remaining "at rest") or "dynamically" (e.g., in a debugger such as gdb, with the program you are trying to understand running). We recommend a combination of these techniques throughout this module. Use your graphical reversing tool to form hypotheses about the program (e.g., "it compares some bytes of my input against something at this assembly instruction address") and then verify these hypotheses in gdb (e.g., break at the address in question, look at the values of the registers it compares, and correlate them with your input).
+          -   **Leave objdump behind.** You might have used objdump previously to look at assembly code. You might be able to solve this level (and maybe the next) with objdump, but **you cannot do this module** without a good graphical reversing tool. Use this challenge as impetus to begin gaining familiarity with a graphical reversing tool.
+          -   Retrace your successful solution. If you solve this challenge without using *both* a graphical reversing tool and a debugger (gdb), go back and re-verify your solution using the tools that you did not use. This will be good practice for understanding how to use these tools in later levels, and you should apply it in any challenge that you solve without relying on both tools.
+
+          Dica: leia o código em Python e veja quais são os requisitos para pegar a flag.
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: binary-exploitation
+          challenge: first-overflow-w
+        name: "Your First Overflow (easy)"
+        description: |
+          Overflow a buffer on the stack to set the right conditions to obtain the flag!
+
+          Dica: tem uma descrição mais detalhada dentro de /challenge/. Use https://charactercounter.com/byte-counter para facilitar.
 
       - import:
           dojo: intro-to-cybersecurity
           module: web-security
-          challenge: sqli-union
-        name: "SQL Injection 03 (Desafio)"
-        description: "E esse último challenge pode ser feito como desafio (em casa ou na aula) para quem conseguiu fazer os outros com facilidade."
+          challenge: cmdi-ls-pipe
+        name: "BÔNUS: CMDi 2"
+        description: |
+          Many developers are aware of things like command injection, and try to prevent it. In this level, you may not use `;`! Can you think of another way to command-inject? Recall what you learned in the [Piping](/linux-luminarium/chaining) module of the [Linux Luminarium](/linux-luminarium)...
+
+          Dica: procure quais outros "chains" você consegue usar na linha de comando, além do ;.
+            
+      - import:
+          dojo: intro-to-cybersecurity
+          module: cryptography
+          challenge: hex
+        name: "BÔNUS: XORing Hex"
+        description: |
+          Of course, as you also learned in Dealing with Data, we tend to represent values in computer memory as hexadecimal. If you don't remember what that is, go back and review those levels. Otherwise, go forth and practice some hexadecimal XOR here!
+
+          Dica: o Python consegue fazer o XOR diretamente com hexadecimais (indicados pelo começo em '0x'), mas ele devolve a resposta em decimais. Pesquise um jeito de transformar esses decimais em hex com Python (ou alguma outra ferramenta).
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: binary-exploitation
+          challenge: lose-variable-w
+        name: "BÔNUS: Precision (easy)"
+        description: |
+          You found a buffer overflow! Now what? You can't just spew input data indiscriminately, because this can corrupt the program's control data into an unrecoverable state. We'll explore this concept in this challenge: you can overflow, but if you overflow *too much*, you won't get the flag.
+
+          Dica: conte esses bytes exatamente para sobrescrever apenas o que você precisa.
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: reverse-engineering
+          challenge: cimg-magic-number-c
+        name: "BÔNUS: File Formats: Magic Numbers (C)"
+        description: |
+          Now in C! This is the same concept as the Python version, but the code is written in C instead. You'll need to read and understand the C code to figure out what magic number is required for the cIMG format.
+
+          Dica: leia o código em C e veja o que você precisa para pegar a flag.
