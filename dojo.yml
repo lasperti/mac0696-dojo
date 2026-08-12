@@ -325,6 +325,8 @@ modules:
         description: |
           Monitor slow traffic from a remote host. Your host is already receiving traffic on port `31337`.
 
+          Dica: o Wireshark tem uma opção para concatenar os dados de vários pacotes diferentes. Cheque a documentação.
+
       - import:
           dojo: intro-to-cybersecurity
           module: intercepting-communication
