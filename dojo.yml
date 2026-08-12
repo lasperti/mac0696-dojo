@@ -299,3 +299,74 @@ modules:
           Now in C! This is the same concept as the Python version, but the code is written in C instead. You'll need to read and understand the C code to figure out what magic number is required for the cIMG format.
 
           Dica: leia o código em C e veja o que você precisa para pegar a flag.
+
+  - id: aula-02
+    name: Aula 02
+    challenges:
+      - import:
+          dojo: intro-to-cybersecurity
+          module: intercepting-communication
+          challenge: level-5
+        name: "Monitor 1"
+        description: |
+          Monitor traffic from a remote host. Your host is already receiving traffic on port `31337`.
+
+          ---
+
+          **HINT:** You will likely want to use the Wireshark tool for this. This is installed on the dojo, and you can launch it from the terminal of the `10.0.0.1` client! Make sure to launch it from there: launched from elsewhere (such as a different terminal on the workspace), Wireshark will not be running on the correct host! Wireshark might take a long time to start up. If you're waiting for over a minute, something is wrong...
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: intercepting-communication
+          challenge: level-6
+        name: "Monitor 2"
+        description: |
+          Monitor slow traffic from a remote host. Your host is already receiving traffic on port `31337`.
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: intercepting-communication
+          challenge: firewall-1
+        name: "Firewall 1"
+        description: |
+          Your host at 10.0.0.1 is receiving traffic on port `31337`; block that traffic.
+
+          ---
+
+          In this challenge, you'll control the flow of data on a port. The title gives you a hint as to how — use a firewall!
+
+          A firewall secures a host by inspecting network traffic and enforcing rules to control it. A common tool for configuring these rules is [iptables](https://linux.die.net/man/8/iptables).
+
+          Note: Rule order and priority matter. You can list the current configuration to understand how packets are processed and debug your setup.
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: intercepting-communication
+          challenge: firewall-2
+        name: "Firewall 2"
+        description: |
+          Your host at 10.0.0.1 is receiving traffic on port `31337`; block that traffic, but only from the remote host at 10.0.0.3, you must allow traffic from the remote host at 10.0.0.2.
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: intercepting-communication
+          challenge: dos-1
+        name: "Denial of Service 1"
+        description: |
+          The client at 10.0.0.3 is communicating with the server at 10.0.0.2 on port 31337. Deny this service.
+
+          ---
+
+          All hosts are constrained by limited resources such as CPU, memory, and bandwidth. A **Denial of Service (DoS)** attack occurs when those constraints are deliberately overwhelmed, preventing the system from delivering its intended *service* to legitimate users. A **Distributed Denial of Service (DDoS)** extends this concept by coordinating multiple machines to amplify the impact.
+
+          DoS attacks commonly exploit internal resource exhaustion or, as in this challenge, connection queue exhaustion.
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: intercepting-communication
+          challenge: dos-2
+        name: "Denial of Service 2"
+        description: |
+          The client at 10.0.0.3 is communicating with the server at 10.0.0.2 on port 31337. Deny this service.
+
+          This time the server forks a new process for each client connection.
