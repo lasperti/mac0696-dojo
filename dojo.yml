@@ -404,7 +404,7 @@ modules:
           2. **For all other "hard" versions**, the source code will not be provided, and you will need to reverse-engineer the binary using your knowledge of the "easy" version as a reference. However, for this one challenge, to get you familiar with the differences between the easy and hard versions, we will provide the source code.
           3. Some randomization is different. Buffers might have different lengths, offsets might vary, etc. You will need to reverse engineer this information from the binary!
 
-          Dica: use um debugger (gdb) para descobrir os offsets e tamanhos dos buffers. A lógica é a mesma da versão easy, mas sem as dicas na saída.
+          Dica: vai ter que ler o código source em C, não precisa usar nenhuma ferramenta de rev.
 
       - import:
           dojo: intro-to-cybersecurity
@@ -428,4 +428,4 @@ modules:
           2. The source code is not provided. You will need to reverse-engineer the binary, but remember, the challenge is conceptually the same as the easy version, so it can be helpful to have the easy version's source code as a secondary reference during your reversing process!
           3. Some randomization is different. Buffers might have different lengths, offsets might vary, etc. You will need to reverse engineer this information from the binary!
 
-          Dica: reverse o binário para descobrir os tamanhos dos buffers e offsets. Use a versão easy como referência conceitual.
+          Dica: agora, com base nos últimos exercícios, você tem uma ideia de como o programa funciona. você vai ter que usar uma ferramenta de engenharia reversa (IDA Pro, Ghidra, gdb, radare2, Cutter, recomendo ou gdb ou radare2 por simplicidade), que você provavelmente vai ter que aprender. É preciso saber algo sobre registradores, funções e offsets em Assembly. Sempre consulte o exercício anterior para ver onde as coisas estão localizadas.
