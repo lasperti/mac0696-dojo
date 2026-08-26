@@ -378,3 +378,54 @@ modules:
           The client at 10.0.0.3 is communicating with the server at 10.0.0.2 on port 31337. Deny this service.
 
           This time the server forks a new process for each client connection.
+
+  - id: aula-03
+    name: Aula 03
+    challenges:
+      - import:
+          dojo: intro-to-cybersecurity
+          module: binary-exploitation
+          challenge: first-overflow-w
+        name: "Your First Overflow (easy)"
+        description: |
+          Overflow a buffer on the stack to set the right conditions to obtain the flag!
+
+          Dica: tem uma descrição mais detalhada dentro de /challenge/. Use https://charactercounter.com/byte-counter para facilitar.
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: binary-exploitation
+          challenge: first-overflow
+        name: "Your First Overflow (hard)"
+        description: |
+          This challenge is identical to its "easy" version from a security perspective, but has the following changes:
+
+          1. Unlike the easy version, it does not give you helpful debug output. You will have to recover this information using a debugger.
+          2. **For all other "hard" versions**, the source code will not be provided, and you will need to reverse-engineer the binary using your knowledge of the "easy" version as a reference. However, for this one challenge, to get you familiar with the differences between the easy and hard versions, we will provide the source code.
+          3. Some randomization is different. Buffers might have different lengths, offsets might vary, etc. You will need to reverse engineer this information from the binary!
+
+          Dica: use um debugger (gdb) para descobrir os offsets e tamanhos dos buffers. A lógica é a mesma da versão easy, mas sem as dicas na saída.
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: binary-exploitation
+          challenge: lose-variable-w
+        name: "Precision (easy)"
+        description: |
+          You found a buffer overflow! Now what? You can't just spew input data indiscriminately, because this can corrupt the program's control data into an unrecoverable state. We'll explore this concept in this challenge: you can overflow, but if you overflow *too much*, you won't get the flag.
+
+          Dica: conte esses bytes exatamente para sobrescrever apenas o que você precisa.
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: binary-exploitation
+          challenge: lose-variable
+        name: "Precision (hard)"
+        description: |
+          This challenge is identical to its "easy" version from a security perspective, but has the following changes:
+
+          1. Unlike the easy version, it does not give you helpful debug output. You will have to recover this information using a debugger.
+          2. The source code is not provided. You will need to reverse-engineer the binary, but remember, the challenge is conceptually the same as the easy version, so it can be helpful to have the easy version's source code as a secondary reference during your reversing process!
+          3. Some randomization is different. Buffers might have different lengths, offsets might vary, etc. You will need to reverse engineer this information from the binary!
+
+          Dica: reverse o binário para descobrir os tamanhos dos buffers e offsets. Use a versão easy como referência conceitual.
