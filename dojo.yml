@@ -429,3 +429,31 @@ modules:
           3. Some randomization is different. Buffers might have different lengths, offsets might vary, etc. You will need to reverse engineer this information from the binary!
 
           Dica: agora, com base nos últimos exercícios, você tem uma ideia de como o programa funciona. você vai ter que usar uma ferramenta de engenharia reversa (IDA Pro, Ghidra, gdb, radare2, Cutter, recomendo ou gdb ou radare2 por simplicidade), que você provavelmente vai ter que aprender. É preciso saber algo sobre registradores, funções e offsets em Assembly. Sempre consulte o exercício anterior para ver onde as coisas estão localizadas.
+
+  - id: aula-04
+    name: Aula 04
+    challenges:
+      - import:
+          dojo: intro-to-cybersecurity
+          module: cryptography
+          challenge: level-2
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: cryptography
+          challenge: otp-tamper
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: cryptography
+          challenge: level-4
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: cryptography
+          challenge: cpa
+
+      - import:
+          dojo: intro-to-cybersecurity
+          module: cryptography
+          challenge: level-9
