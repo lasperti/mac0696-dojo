@@ -437,23 +437,28 @@ modules:
           dojo: intro-to-cybersecurity
           module: cryptography
           challenge: level-2
+        name: "One-time Pad"
 
       - import:
           dojo: intro-to-cybersecurity
           module: cryptography
           challenge: otp-tamper
+        name: "One-time Pad Tampering"
 
       - import:
           dojo: intro-to-cybersecurity
           module: cryptography
           challenge: level-4
+        name: "AES"
 
       - import:
           dojo: intro-to-cybersecurity
           module: cryptography
           challenge: cpa
+        name: "AES-ECB-CPA"
 
       - import:
           dojo: intro-to-cybersecurity
           module: cryptography
           challenge: level-9
+        name: "SHA 1"
